@@ -16,6 +16,12 @@ jobs:
           - remoteOwner: "v2fly"
             remoteName: "v2ray-core"
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ matrix.remoteName }}
+          token: ${{ secrets.PUBLIC_REPO_KEY }}
+          path: ${{ matrix.remoteName }}
       - name: Set up Git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -24,7 +30,6 @@ jobs:
       - name: Sync ${{ matrix.remoteName }}
         run: |
           remote_branch="$(curl -sL https://api.github.com/repos/${{ matrix.remoteOwner }}/${{ matrix.remoteName }} | jq -r '.default_branch')"
-          git clone "git@github.com:${{ github.repository_owner }}/${{ matrix.remoteName }}.git"
           cd "${{ matrix.remoteName }}"
           git remote add upstream "https://github.com/${{ matrix.remoteOwner }}/${{ matrix.remoteName }}.git"
           git fetch upstream
