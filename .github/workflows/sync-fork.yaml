@@ -23,7 +23,7 @@ jobs:
           git config --global advice.detachedHead false
       - name: Sync ${{ matrix.remoteName }}
         run: |
-          remote_branch="$(curl -sL https://api.github.com/repos/${{ matrix.remoteOwner }}/${{ matrix.remoteName }}/releases/latest | jq -r '.default_branch')"
+          remote_branch="$(curl -sL https://api.github.com/repos/${{ matrix.remoteOwner }}/${{ matrix.remoteName }} | jq -r '.default_branch')"
           git clone https://github.com/${{ github.repository_owner }}/${{ matrix.remoteName }}.git
           cd ${{ matrix.remoteName }}
           git remote add upstream https://github.com/${{ matrix.remoteOwner }}/${{ matrix.remoteName }}.git
