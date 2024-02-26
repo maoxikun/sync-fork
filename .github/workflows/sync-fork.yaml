@@ -8,25 +8,25 @@ env:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - key: "XTLS"
+            value: "Xray-core"
+          - key: "v2fly"
+            value: "v2ray-core"
     steps:
-      - name: Setup Git config
+      - name: Set up Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global advice.detachedHead false
-      - name: Sync Xray-core
+      - name: Sync ${{ matrix.value }}
         run: |
-          remote_branch="$(curl -sL https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r '.default_branch')"
-          git clone https://github.com/maoxikun/Xray-core.git
-          git remote add upstream https://github.com/XTLS/Xray-core.git
-          git fetch upstream
-          git reset --hard upstream/$remote_branch
-          git push origin $remote_branch --force
-      - name: Sync v2ray-core
-        run: |
-          remote_branch="$(curl -sL https://api.github.com/repos/v2fly/v2ray-core/releases/latest | jq -r '.default_branch')"
-          git clone https://github.com/maoxikun/v2ray-core.git
-          git remote add upstream https://github.com/v2fly/v2ray-core.git
+          remote_branch="$(curl -sL https://api.github.com/repos/${{ matrix.key }}/${{ matrix.value }}/releases/latest | jq -r '.default_branch')"
+          git clone https://github.com/${{ github.repository_owner }}/${{ matrix.value }}.git
+          cd ${{ matrix.value }}
+          git remote add upstream https://github.com/${{ matrix.key }}/${{ matrix.value }}.git
           git fetch upstream
           git reset --hard upstream/$remote_branch
           git push origin $remote_branch --force
