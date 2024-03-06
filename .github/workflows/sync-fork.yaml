@@ -19,6 +19,10 @@ jobs:
             remoteName: "Microsoft-Activation-Scripts"
           - remoteOwner: "iluwatar"
             remoteName: "java-design-patterns"
+          - remoteOwner: "3Kmfi6HP"
+            remoteName: "EDtunnel"
+          - remoteOwner: "zizifn"
+            remoteName: "edgetunnel"
     steps:
       - name: Set up Git
         run: |
