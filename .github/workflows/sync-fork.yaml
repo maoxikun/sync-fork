@@ -15,6 +15,8 @@ jobs:
             remoteName: "Xray-core"
           - remoteOwner: "v2fly"
             remoteName: "v2ray-core"
+          - remoteOwner: "2dust"
+            remoteName: "v2rayNG"
           - remoteOwner: "massgravel"
             remoteName: "Microsoft-Activation-Scripts"
           - remoteOwner: "iluwatar"
