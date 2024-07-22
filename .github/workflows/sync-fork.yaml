@@ -15,14 +15,18 @@ jobs:
             remoteName: "Xray-core"
           - remoteOwner: "v2fly"
             remoteName: "v2ray-core"
-          - remoteOwner: "massgravel"
-            remoteName: "Microsoft-Activation-Scripts"
-          - remoteOwner: "iluwatar"
-            remoteName: "java-design-patterns"
+          - remoteOwner: "2dust"
+            remoteName: "v2rayN"
+          - remoteOwner: "2dust"
+            remoteName: "v2rayNG"
           - remoteOwner: "3Kmfi6HP"
             remoteName: "EDtunnel"
           - remoteOwner: "zizifn"
             remoteName: "edgetunnel"
+          - remoteOwner: "massgravel"
+            remoteName: "Microsoft-Activation-Scripts"
+          - remoteOwner: "iluwatar"
+            remoteName: "java-design-patterns"
     steps:
       - name: Set up Git
         run: |
