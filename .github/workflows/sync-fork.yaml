@@ -21,6 +21,8 @@ jobs:
             remoteName: "v2rayNG"
           - remoteOwner: "2dust"
             remoteName: "AndroidLibXrayLite"
+          - remoteOwner: "2dust"
+            remoteName: "AndroidLibV2rayLite"
           - remoteOwner: "zizifn"
             remoteName: "edgetunnel"
           - remoteOwner: "massgravel"
