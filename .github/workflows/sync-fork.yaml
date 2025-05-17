@@ -23,8 +23,6 @@ jobs:
             remoteName: "AndroidLibXrayLite"
           - remoteOwner: "2dust"
             remoteName: "AndroidLibV2rayLite"
-          - remoteOwner: "zizifn"
-            remoteName: "edgetunnel"
           - remoteOwner: "massgravel"
             remoteName: "Microsoft-Activation-Scripts"
           - remoteOwner: "iluwatar"
