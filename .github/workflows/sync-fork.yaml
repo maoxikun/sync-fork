@@ -27,6 +27,8 @@ jobs:
             remoteName: "Microsoft-Activation-Scripts"
           - remoteOwner: "iluwatar"
             remoteName: "java-design-patterns"
+          - remoteOwner: "kanoqwq"
+            remoteName: "UFI-TOOLS"
     steps:
       - name: Set up Git
         run: |
