@@ -13,6 +13,8 @@ jobs:
         include:
           - remoteOwner: "XTLS"
             remoteName: "Xray-core"
+          - remoteOwner: "XTLS"
+            remoteName: "REALITY"
           - remoteOwner: "v2fly"
             remoteName: "v2ray-core"
           - remoteOwner: "2dust"
