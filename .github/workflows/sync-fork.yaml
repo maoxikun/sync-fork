@@ -31,6 +31,8 @@ jobs:
             remoteName: "java-design-patterns"
           - remoteOwner: "kanoqwq"
             remoteName: "UFI-TOOLS"
+          - remoteOwner: "Daniel-Hwang"
+            remoteName: "U20-F50"
     steps:
       - name: Set up Git
         run: |
