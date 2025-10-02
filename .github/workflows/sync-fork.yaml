@@ -11,6 +11,8 @@ jobs:
     strategy:
       matrix:
         include:
+          - remoteOwner: "apernet"
+            remoteName: "hysteria"
           - remoteOwner: "XTLS"
             remoteName: "Xray-core"
           - remoteOwner: "XTLS"
