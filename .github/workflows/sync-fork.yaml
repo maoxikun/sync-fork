@@ -13,6 +13,8 @@ jobs:
         include:
           - remoteOwner: "apernet"
             remoteName: "hysteria"
+          - remoteOwner: "apernet"
+            remoteName: "hysteria-realm-server"
           - remoteOwner: "XTLS"
             remoteName: "Xray-core"
           - remoteOwner: "XTLS"
